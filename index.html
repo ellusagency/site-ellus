@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Sites e landing pages estratégicos para negócios e profissionais em todo o Brasil. Design, estratégia e presença digital que gera contatos reais.">
+<title>Ellus Agency — Sites e Landing Pages Estratégicos</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<!-- Open Graph (compartilhamento WhatsApp, redes sociais) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ellusagency.com.br/">
+<meta property="og:title" content="Ellus Agency — Sites e Landing Pages Estratégicos">
+<meta property="og:description" content="Sites e landing pages estratégicos para negócios e profissionais em todo o Brasil. Design, estratégia e presença digital que gera contatos reais.">
+<meta property="og:image" content="https://ellusagency.com.br/ellus-comp-1.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ellus Agency — Sites e Landing Pages Estratégicos">
+<meta name="twitter:description" content="Sites e landing pages estratégicos para negócios e profissionais em todo o Brasil.">
+<meta name="twitter:image" content="https://ellusagency.com.br/ellus-comp-1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET & BASE ─────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:'Manrope',sans-serif;
+  background:#FAFAFA;
+  color:#0A0A0A;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* ─── TOKENS ────────────────────────────────────────── */
+:root{
+  --dark:#07050C;
+  --dark-2:#121020;
+  --dark-3:#1C1830;
+  --light:#FAFAFA;
+  --white:#FFFFFF;
+  --violet:#6D28D9;
+  --violet-lit:#7B4BC7;
+  --violet-hi:#9B6BE8;
+  --lilac:#C084FC;
+  --grad:linear-gradient(120deg,var(--lilac) 0%,var(--violet-lit) 50%,var(--violet) 100%);
+  --muted-dark:rgba(255,255,255,0.45);
+  --muted-light:rgba(10,10,10,0.45);
+  --border-dark:rgba(255,255,255,0.10);
+  --border-light:rgba(10,10,10,0.10);
+  --pad:clamp(20px,5vw,72px);
+  --maxw:1380px;
+}
+
+/* ─── TYPOGRAPHY ────────────────────────────────────── */
+.disp{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.03em;line-height:1.0;text-wrap:balance;}
+h1,h2,h3{text-wrap:balance;}
+p{text-wrap:pretty;}
+.label{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;}
+
+/* ─── LAYOUT ─────────────────────────────────────────── */
+.shell{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+
+/* ─── REVEAL ANIMATION ──────────────────────────────── */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1);}
+.rv.in{opacity:1;transform:none;}
+.rv-d1{transition-delay:.1s;}
+.rv-d2{transition-delay:.2s;}
+.rv-d3{transition-delay:.3s;}
+.rv-d4{transition-delay:.4s;}
+/* Slide lateral para os steps do processo */
+.proc-step.rv{transform:translateX(-48px);}
+.proc-step.rv.in{transform:none;}
+.proc-step.rv-d1{transition-delay:.55s;}
+.proc-step.rv-d2{transition-delay:1.10s;}
+.proc-step.rv-d3{transition-delay:1.65s;}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marq__inner{animation:none!important}html{scroll-behavior:auto}}
+
+/* ─── MARQUEE ────────────────────────────────────────── */
+.marq{overflow:hidden;padding:18px 0;}
+.marq__inner{display:flex;gap:0;white-space:nowrap;animation:marquee 30s linear infinite;}
+.marq__inner span{display:inline-block;padding:0 40px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marq.dark .marq__inner span{color:rgba(255,255,255,0.35);}
+.marq.dark .marq__inner span.dot{color:var(--violet-hi);font-size:16px;padding:0 20px;}
+.marq.light .marq__inner span{color:rgba(10,10,10,0.25);}
+.marq.light .marq__inner span.dot{color:var(--violet);font-size:16px;padding:0 20px;}
+
+/* ─── NAVBAR ─────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:99;
+  transition:background .4s ease,box-shadow .4s ease;
+}
+.nav.scrolled{
+  background:#fff;
+  box-shadow:0 1px 0 rgba(10,10,10,0.08);
+}
+.nav__inner{
+  max-width:var(--maxw);margin:0 auto;
+  padding:20px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  transition:padding .3s ease;
+}
+.nav.scrolled .nav__inner{padding:14px var(--pad);}
+.nav__logo{display:flex;align-items:center;line-height:1;}
+.nav__logo img{width:auto;display:block;transition:opacity .35s ease;}
+.nav__logo img.logo--white{height:52px;opacity:1;}
+.nav__logo img.logo--color{height:36px;display:none;opacity:0;}
+.nav.scrolled .nav__logo img.logo--white{display:none;opacity:0;}
+.nav.scrolled .nav__logo img.logo--color{display:block;opacity:1;}
+.nav__wordmark{display:none;}
+.nav__links{display:flex;align-items:center;gap:32px;}
+.nav__links a{font-size:14px;color:rgba(255,255,255,0.65);font-weight:500;transition:color .2s;}
+.nav__links a:hover{color:#fff;}
+.nav.scrolled .nav__links a{color:rgba(10,10,10,0.6);}
+.nav.scrolled .nav__links a:hover{color:#000;}
+.nav__cta{
+  background:var(--violet);
+  color:#fff;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;font-size:13.5px;
+  padding:10px 22px;border-radius:8px;
+  white-space:nowrap;
+  transition:background .2s,transform .15s;
+}
+.nav__cta:hover{background:var(--violet-lit);transform:translateY(-1px);}
+@media(max-width:768px){
+  .nav__links{display:none;}
+  .nav__inner{padding:16px var(--pad);}
+}
+
+/* ─── HERO ───────────────────────────────────────────── */
+.hero{
+  min-height:100svh;
+  background:#07050C;
+  display:flex;flex-direction:column;
+  justify-content:flex-end;
+  padding-bottom:clamp(96px,12vh,140px);
+  position:relative;overflow:hidden;
+}
+.hero__noise{
+  position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero__glow{
+  position:absolute;top:-20%;left:50%;transform:translateX(-50%);
+  width:800px;height:600px;
+  background:radial-gradient(ellipse at center,rgba(123,75,199,0.18) 0%,transparent 70%);
+  pointer-events:none;z-index:0;
+}
+.hero__inner{position:relative;z-index:1;width:100%;}
+.hero__layout{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:clamp(40px,6vw,100px);
+  align-items:start;
+}
+.hero__services-menu{
+  display:flex;flex-direction:column;
+  justify-content:space-between;
+  min-width:220px;
+  align-self:stretch;
+}
+.hero__svc-item{
+  display:flex;align-items:center;
+  flex:1;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(13px,1.2vw,15px);
+  font-weight:500;
+  color:rgba(255,255,255,0.6);
+  text-decoration:none;
+  transition:color .2s,padding-left .2s;
+  white-space:nowrap;
+}
+.hero__svc-item:first-child{border-top:1px solid rgba(255,255,255,0.1);}
+.hero__svc-item:hover{color:#fff;padding-left:6px;}
+@media(max-width:900px){.hero__services-menu{display:none;}.hero__layout{display:contents;}}
+.hero__label{
+  color:rgba(255,255,255,0.85);margin-bottom:32px;
+  display:flex;align-items:center;gap:12px;
+  font-size:13px;
+}
+.hero__label::before{content:'';width:32px;height:1px;background:var(--violet-hi);}
+.hero h1{
+  font-size:clamp(32px,5vw,72px);
+  color:#fff;
+  max-width:900px;
+  margin-bottom:28px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--violet-hi);
+}
+.hero__sub{
+  font-size:clamp(15px,1.8vw,19px);
+  color:rgba(255,255,255,0.88);
+  max-width:540px;
+  line-height:1.65;
+  margin-bottom:40px;
+}
+.hero__actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--violet);
+  color:#fff;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;font-size:15px;
+  padding:14px 28px;border-radius:8px;
+  border:none;
+  transition:background .2s,transform .15s;
+}
+.btn-primary:hover{background:var(--violet-lit);transform:translateY(-1px);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:600;
+  padding:13px 24px;border-radius:8px;
+  border:1.5px solid rgba(255,255,255,0.18);
+  color:rgba(255,255,255,0.6);
+  transition:color .2s,border-color .2s;
+  background:none;
+}
+.btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,0.45);}
+.hero__avail{
+  display:flex;align-items:center;gap:8px;
+  margin-top:20px;
+  font-size:12px;letter-spacing:.04em;
+  color:rgba(255,255,255,0.45);
+}
+.hero__avail-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#4ade80;
+  box-shadow:0 0 0 0 rgba(74,222,128,0.5);
+  animation:pulse-dot 2.5s ease-in-out infinite;
+  flex-shrink:0;
+}
+@keyframes pulse-dot{
+  0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,0.5);}
+  50%{box-shadow:0 0 0 5px rgba(74,222,128,0);}
+}
+.hero__scroll{
+  position:absolute;bottom:clamp(16px,4vh,36px);right:var(--pad);
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,0.28);
+  writing-mode:vertical-rl;
+  z-index:1;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────── */
+.sec-hd{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:clamp(40px,6vw,80px);}
+.sec-hd__num{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;}
+.sec-hd h2{font-size:clamp(28px,4vw,52px);}
+
+/* ─── INTRO ──────────────────────────────────────────── */
+.intro{background:var(--white);color:var(--dark);overflow:hidden;}
+.intro__layout{
+  display:grid;
+  grid-template-columns:1fr 40%;
+  gap:0;
+  align-items:stretch;
+}
+.intro__left-wrap{
+  padding:clamp(48px,6vw,80px) clamp(32px,5vw,64px) clamp(40px,5vw,72px) max(var(--pad), calc((100vw - var(--maxw)) / 2 + var(--pad)));
+  display:flex;flex-direction:column;justify-content:space-between;gap:clamp(40px,5vw,64px);
+}
+.intro__left{
+  display:flex;flex-direction:column;gap:clamp(16px,2vw,24px);
+  padding-top:clamp(16px,2.5vw,36px);
+}
+.intro__big{
+  font-size:clamp(26px,3.2vw,44px);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:-0.03em;
+  color:var(--dark);
+  text-wrap:balance;
+}
+.intro__tagline{
+  font-size:clamp(15px,1.6vw,19px);
+  font-family:'Manrope',sans-serif;
+  font-weight:600;
+  line-height:1.65;
+  color:rgba(10,10,10,0.72);
+  margin:0;
+}
+.intro__big em,.intro__tagline em{font-style:normal;color:var(--violet);font-weight:800;}
+.intro__body{font-size:clamp(14px,1.5vw,15px);color:rgba(10,10,10,0.82);line-height:1.75;margin:0;}
+.intro__right{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(16px,2vw,24px) clamp(16px,2vw,24px) clamp(16px,2vw,24px) 0;
+}
+.intro__img{
+  object-fit:cover;object-position:center 20%;
+  border-radius:8px;
+  display:block;
+  position:absolute;
+  inset:clamp(16px,2vw,24px) clamp(16px,2vw,24px) clamp(16px,2vw,24px) 0;
+  width:calc(100% - clamp(16px,2vw,24px));
+  height:calc(100% - clamp(32px,4vw,48px));
+}
+@media(max-width:768px){
+  .intro__layout{grid-template-columns:1fr;}
+  .intro__right{display:none;}
+}
+.intro__stats{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px);padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--border-light);}
+.stat__num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(32px,4vw,48px);letter-spacing:-0.03em;color:var(--dark);}
+.stat__num span{color:var(--violet-hi);}
+.stat__label{font-size:12px;color:rgba(10,10,10,0.6);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;}
+@media(max-width:768px){
+  .intro__top{grid-template-columns:1fr;}
+  .intro__stats{grid-template-columns:1fr 1fr;}
+}
+
+/* ─── IMPACT ─────────────────────────────────────────── */
+.impact{
+  background:url('background.png') center center/cover no-repeat fixed;
+  padding:clamp(48px,8vw,96px) 0 0;
+}
+.impact__header{padding:0 var(--pad);max-width:var(--maxw);margin:0 auto clamp(32px,5vw,64px);text-align:center;}
+.impact__label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:16px;}
+.impact__title-wrap{position:relative;}
+.impact__title{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;
+  font-size:clamp(36px,6vw,88px);
+  letter-spacing:-0.03em;
+  display:flex;flex-direction:column;gap:.08em;
+}
+.impact__title .tl{display:block;line-height:1.15;}
+.impact__title em{font-style:normal;}
+.impact__title .tl{color:#fff;}
+.impact__title em{color:var(--violet-hi);}
+/* Asset container */
+.impact__scroll-driver{position:relative;height:300vh;}
+.impact__asset{
+  position:relative;width:100%;
+  overflow:hidden;
+  border-radius:0;
+  background:transparent;
+}
+.impact__asset--sticky{
+  position:sticky;top:0;
+  width:100%;height:100vh;
+  aspect-ratio:unset;
+  display:flex;align-items:center;justify-content:center;
+  background:transparent;
+}
+@media(max-width:768px){
+  .impact__asset--sticky{height:100svh;}
+}
+.impact__asset--sticky::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:390px;
+  background:linear-gradient(to bottom,
+    transparent 0%,
+    rgba(7,5,12,0.5) 60%,
+    var(--dark) 100%);
+  pointer-events:none;
+  z-index:2;
+}
+.impact__placeholder{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:16px;
+  border:1px dashed rgba(123,75,199,0.25);
+  margin:0 var(--pad);
+  border-radius:16px 16px 0 0;
+}
+.impact__ph-icon{
+  width:56px;height:56px;border-radius:50%;
+  background:rgba(123,75,199,0.12);border:1px solid rgba(123,75,199,0.25);
+  display:flex;align-items:center;justify-content:center;
+}
+.impact__ph-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
+.impact__ph-hint{font-size:13px;color:rgba(255,255,255,0.15);max-width:280px;text-align:center;line-height:1.6;}
+.impact__img,.impact__video{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center center;
+  display:block;
+}
+.impact__lottie{width:100%;height:100%;overflow:hidden;}
+.impact__lottie svg{width:100%!important;height:100%!important;}
+/* Fade gradiente na borda inferior para fundir com portfólio */
+.impact__fade{
+  position:absolute;bottom:0;left:0;right:0;height:30%;
+  background:linear-gradient(to bottom,transparent,var(--dark));
+  pointer-events:none;
+}
+
+/* ─── PORTFOLIO ──────────────────────────────────────── */
+.portfolio{padding:clamp(80px,10vw,140px) 0;background:var(--dark);color:#fff;}
+.portfolio .sec-hd__num{color:rgba(255,255,255,0.5);}
+.portfolio h2{color:#fff;}
+.portfolio .sec-hd p{color:rgba(255,255,255,0.45);}
+.porto-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.porto-group{margin-bottom:40px;}
+.porto-group__label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,0.35);margin-bottom:16px;}
+.porto-item{display:flex;flex-direction:column;gap:14px;}
+.porto-card{
+  position:relative;overflow:hidden;border-radius:12px;
+  background:#111;aspect-ratio:16/11;
+  cursor:pointer;
+  transition:transform .4s cubic-bezier(.2,.7,.3,1);
+}
+.porto-card:hover{transform:scale(1.02);}
+.porto-card__img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1),opacity .4s ease;
+}
+.porto-card:hover .porto-card__img{transform:scale(1.04);opacity:.45;}
+.porto-card__hover{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  opacity:0;transition:opacity .35s ease;pointer-events:none;
+}
+.porto-card:hover .porto-card__hover{opacity:1;}
+.porto-card__arrow{
+  width:56px;height:56px;border-radius:50%;
+  background:rgba(255,255,255,0.95);
+  display:flex;align-items:center;justify-content:center;
+  transform:translateY(12px);transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.porto-card:hover .porto-card__arrow{transform:translateY(0);}
+.porto-card__arrow svg{width:22px;height:22px;color:#07050C;}
+.porto-card__hover-label{
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  color:rgba(255,255,255,0.85);
+  transform:translateY(10px);
+  transition:transform .4s cubic-bezier(.16,1,.3,1) .06s, opacity .35s ease .06s;
+  opacity:0;
+}
+.porto-card:hover .porto-card__hover-label{transform:translateY(0);opacity:1;}
+.porto-card__info{display:flex;flex-direction:column;gap:4px;padding:0 2px;}
+.porto-card__tags{display:flex;gap:8px;flex-wrap:wrap;}
+.porto-card__tag{
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  color:rgba(255,255,255,0.35);
+}
+.porto-card__name{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;font-size:clamp(15px,1.5vw,18px);
+  color:rgba(255,255,255,0.8);letter-spacing:-0.01em;
+}
+/* Placeholder card */
+.porto-card.placeholder{background:linear-gradient(135deg,#1C1830 0%,#0F0B1E 100%);cursor:default;}
+.porto-card.placeholder:hover{transform:none;}
+.porto-card.wip{background:linear-gradient(135deg,#1E1E1E 0%,#141414 100%);border:1px solid rgba(255,255,255,0.07);cursor:default;}
+.porto-card.wip:hover{transform:none;}
+.porto-card__placeholder-inner{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:12px;
+  padding:32px;text-align:center;
+}
+.porto-card__placeholder-icon{
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(123,75,199,0.2);border:1px solid rgba(123,75,199,0.3);
+  display:flex;align-items:center;justify-content:center;
+}
+.porto-card__placeholder-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:20px;color:rgba(255,255,255,0.7);letter-spacing:-0.02em;}
+.porto-card__placeholder-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);}
+.porto-card__wip-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  color:rgba(255,255,255,0.5);
+}
+.porto-card__wip-badge::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:rgba(255,255,255,0.5);
+  animation:pulse-dot 1.8s ease-in-out infinite;
+}
+@keyframes pulse-dot{0%,100%{opacity:.6;}50%{opacity:1;}}
+@keyframes spin{to{transform:rotate(360deg);}}
+.wip-spinner{
+  width:44px;height:44px;
+  animation:spin 1.8s steps(12) infinite;
+  transform-origin:center;
+}
+.porto-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:32px;flex-wrap:wrap;gap:16px;}
+.porto-note{font-size:13px;color:rgba(255,255,255,0.35);}
+.btn-porto-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:600;
+  padding:13px 24px;border-radius:8px;
+  background:#2A2A2A;
+  color:rgba(255,255,255,0.85);
+  border:1px solid rgba(255,255,255,0.08);
+  transition:background .2s,color .2s;
+  text-decoration:none;
+}
+.btn-porto-cta:hover{background:#363636;color:#fff;}
+@media(max-width:640px){.porto-grid{grid-template-columns:1fr;}}
+
+/* ─── SERVICES ───────────────────────────────────────── */
+.services{padding:clamp(80px,10vw,140px) 0;background:var(--white);color:var(--dark);}
+.services .sec-hd__num{color:rgba(10,10,10,0.5);}
+.services .sec-hd h2{color:var(--dark);}
+.services .sec-hd__sub{font-size:clamp(12px,1.1vw,14px);color:rgba(10,10,10,0.65);max-width:380px;line-height:1.6;text-align:right;}
+.svc-list{display:flex;flex-direction:column;gap:0;}
+.svc-item{
+  display:grid;grid-template-columns:60px 1fr;
+  align-items:start;gap:32px;
+  padding:36px 0;
+  border-bottom:1px solid var(--border-light);
+  transition:background .2s;
+}
+.svc-item:first-child{border-top:1px solid var(--border-light);}
+.svc-num{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:800;font-size:13px;
+  color:rgba(10,10,10,0.35);
+  letter-spacing:.1em;
+  padding-top:4px;
+}
+.svc-body{}
+.svc-name{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;font-size:clamp(20px,2.5vw,30px);
+  letter-spacing:-0.025em;color:var(--dark);margin-bottom:10px;
+  transition:color .2s;
+}
+.svc-item:hover .svc-name{color:var(--violet-hi);}
+.svc-name--link{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit;transition:color .2s;}
+.svc-name--link:hover{color:var(--violet);}
+.svc-name--link .svc-arrow{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;border-radius:50%;
+  border:1.5px solid currentColor;
+  opacity:0.45;
+  flex-shrink:0;
+  transition:opacity .2s, transform .2s;
+}
+.svc-name--link .svc-arrow svg{display:block;}
+.svc-name--link:hover .svc-arrow{opacity:0.9;transform:translate(1px,-1px);}
+.svc-for{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(10,10,10,0.55);margin-bottom:10px;}
+.svc-desc{font-size:clamp(14px,1.5vw,16px);color:rgba(10,10,10,0.70);line-height:1.65;max-width:600px;}
+@media(max-width:640px){
+  .svc-item{grid-template-columns:40px 1fr;gap:16px;}
+}
+
+/* ─── PROCESS ────────────────────────────────────────── */
+.process{padding:clamp(80px,10vw,140px) 0;background:var(--light);}
+.process .sec-hd__num{color:rgba(10,10,10,0.65);}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-light);}
+.proc-step{
+  background:var(--light);
+  padding:clamp(28px,4vw,48px) clamp(20px,3vw,36px);
+}
+.proc-step__num{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:48px;
+  letter-spacing:-0.04em;
+  color:var(--violet-hi);
+  margin-bottom:24px;line-height:1;
+}
+.proc-step__title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:18px;letter-spacing:-0.02em;margin-bottom:10px;}
+.proc-step__desc{font-size:14px;color:rgba(10,10,10,0.7);line-height:1.65;}
+@media(max-width:768px){
+  .proc-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .proc-grid{grid-template-columns:1fr;}
+}
+
+/* ─── DIFFERENTIALS ──────────────────────────────────── */
+.diffs{padding:clamp(80px,10vw,140px) 0;background:var(--dark-2);color:#fff;}
+.diffs .sec-hd__num{color:rgba(255,255,255,0.7);}
+.diffs .sec-hd h2{color:#fff;}
+.diffs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);}
+.diff-card{
+  background:var(--dark-2);
+  padding:clamp(28px,4vw,48px) clamp(20px,3vw,36px);
+}
+.diff-title{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(15px,1.3vw,17px);
+  letter-spacing:-0.02em;color:#fff;margin-bottom:10px;
+  display:flex;align-items:baseline;gap:10px;
+}
+.diff-title::before{
+  content:'✓';
+  flex-shrink:0;
+  font-size:12px;font-weight:500;
+  color:var(--violet-hi);
+  font-family:'Manrope',sans-serif;
+  letter-spacing:0;
+}
+.diff-desc{font-size:clamp(13px,1.1vw,14.5px);color:rgba(255,255,255,0.82);line-height:1.7;}
+@media(max-width:768px){.diffs-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.diffs-grid{grid-template-columns:1fr;}}
+
+/* ─── STRIPE ─────────────────────────────────────────── */
+.stripe{
+  background:#fff;
+  padding:clamp(48px,6vw,80px) var(--pad);
+  text-align:center;
+  overflow:hidden;
+  position:relative;
+}
+#stripe-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.stripe__text{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:800;
+  font-size:clamp(22px,3.2vw,42px);
+  letter-spacing:-0.03em;
+  line-height:1.2;
+  position:relative;
+  z-index:1;
+}
+.stripe__text::before{
+  content:'';
+  position:absolute;
+  inset:-40px -80px;
+  background:radial-gradient(ellipse at center,rgba(255,255,255,1) 35%,rgba(255,255,255,0.7) 60%,rgba(255,255,255,0) 100%);
+  z-index:-1;
+  pointer-events:none;
+}
+.stripe__text .sw,
+.stripe__text em{
+  font-style:normal;
+}
+.stripe__text em{display:inline;font-style:normal;}
+.stripe__text .sw{
+  color:#C4B5D4;
+  opacity:1;
+  transition:color .4s ease;
+}
+.stripe__text .sw.sw--revealed{color:#5B21B6;}
+.stripe__letter{display:inline-block;position:relative;color:#C4B5D4;}
+.stripe__letter.space{width:.28em;}
+.stripe__letter::after{
+  content:attr(data-char);
+  position:absolute;inset:0;
+  color:#5B21B6;
+  opacity:0;
+}
+@keyframes letterIn{from{opacity:0;}to{opacity:1;}}
+.stripe.in .stripe__letter::after{animation:letterIn .35s ease var(--d,0s) forwards;}
+.stripe__accent{color:var(--violet);}
+@media(prefers-reduced-motion:reduce){.sw{opacity:1;transform:none;animation:none!important;}}
+
+/* ─── ABOUT ──────────────────────────────────────────── */
+.about{padding:clamp(80px,10vw,140px) 0;background:var(--dark);color:#fff;}
+.about__grid{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:clamp(48px,6vw,96px);
+  align-items:start;
+}
+.about__text{width:100%;min-width:0;}
+.about__label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:20px;}
+.about__title{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;
+  font-size:clamp(28px,3.5vw,52px);
+  letter-spacing:-0.03em;line-height:1.1;
+  color:#fff;
+  margin-bottom:clamp(20px,3vw,36px);
+}
+.about__title em{font-style:normal;color:var(--violet-hi);}
+.about__body{font-size:clamp(15px,1.2vw,17px);line-height:1.75;color:rgba(255,255,255,0.82);margin-bottom:20px;text-align:justify;hyphens:auto;width:100%;}
+.about__body+.about__body{margin-top:0;}
+.about__sig{
+  margin-top:clamp(28px,4vw,48px);
+  display:flex;align-items:center;gap:16px;
+}
+.about__sig-line{width:40px;height:1px;background:var(--violet-hi);}
+.about__sig-text{font-size:13px;font-weight:600;letter-spacing:.06em;color:#fff;}
+.about__sig-sub{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;}
+/* foto */
+.about__photo{
+  aspect-ratio:4/5;
+  border-radius:4px;
+  background:var(--dark-3);
+  overflow:hidden;
+  position:relative;
+}
+.about__photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.about__photo-placeholder{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;color:rgba(255,255,255,0.2);font-size:13px;text-align:center;
+  padding:24px;
+}
+.about__photo-placeholder svg{opacity:.25;}
+@media(max-width:900px){
+  .about__grid{grid-template-columns:1fr;gap:clamp(40px,6vw,64px);}
+  .about__photo{aspect-ratio:3/4;max-width:100%;}
+}
+
+/* ─── CONTACT FORM ───────────────────────────────────── */
+.contact{padding:clamp(80px,10vw,140px) 0;background:var(--light);}
+.contact__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(48px,6vw,96px);
+  align-items:start;
+}
+/* Left */
+.contact__left{position:sticky;top:120px;}
+.contact__label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:rgba(10,10,10,0.6);margin-bottom:20px;}
+.contact__title{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;
+  font-size:clamp(28px,3.5vw,52px);
+  letter-spacing:-0.03em;line-height:1.1;
+  color:var(--dark);margin-bottom:16px;
+}
+.contact__sub{font-size:15px;line-height:1.7;color:rgba(10,10,10,0.7);margin-bottom:40px;}
+.contact__divider{width:100%;height:1px;background:var(--border-light);margin-bottom:28px;}
+.contact__direct-label{font-size:12px;color:rgba(10,10,10,0.6);margin-bottom:12px;}
+.contact__wa{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;
+  color:#fff;
+  background:var(--violet);
+  padding:14px 28px;
+  border-radius:8px;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  box-shadow:0 4px 18px rgba(109,40,217,0.35);
+}
+.contact__wa:hover{background:var(--violet-lit);transform:translateY(-2px);box-shadow:0 8px 28px rgba(109,40,217,0.45);}
+.contact__wa svg{flex-shrink:0;}
+/* Right — form card */
+.contact__form-wrap{
+  background:transparent;
+  border:none;
+  padding:clamp(28px,4vw,48px) 0;
+}
+/* Progress dots */
+.form-progress{display:flex;align-items:center;gap:8px;margin-bottom:32px;}
+.form-dot{
+  width:28px;height:4px;border-radius:2px;
+  background:rgba(10,10,10,0.12);
+  transition:background .3s,width .3s;
+}
+.form-dot.active{background:var(--dark);width:40px;}
+.form-dot.done{background:var(--violet-hi);}
+/* Steps */
+.form-step{display:none;}
+.form-step.visible{display:block;}
+.form-step__q{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;
+  font-size:clamp(16px,1.8vw,20px);letter-spacing:-0.02em;
+  color:#000;margin-bottom:20px;
+}
+/* Option grid */
+.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;}
+.opt-btn{
+  padding:12px 16px;
+  border:1px solid rgba(10,10,10,0.14);
+  border-radius:8px;
+  background:#fff;
+  font-family:'Manrope',sans-serif;font-size:14px;font-weight:700;
+  color:rgba(10,10,10,0.85);
+  cursor:pointer;text-align:center;
+  transition:border-color .2s,background .2s,color .2s;
+}
+.opt-btn:hover{border-color:var(--violet);color:var(--violet);}
+.opt-btn.selected{background:var(--violet);border-color:var(--violet);color:#fff;}
+/* Text inputs */
+.form-field{margin-bottom:16px;}
+.form-field label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:rgba(10,10,10,0.7);margin-bottom:6px;}
+.form-field input,
+.form-field textarea{
+  width:100%;
+  padding:13px 16px;
+  border:1.5px solid rgba(10,10,10,0.25);
+  border-radius:8px;
+  font-family:'Manrope',sans-serif;font-size:14px;font-weight:500;
+  color:#000;background:transparent;
+  transition:border-color .2s;
+  outline:none;resize:none;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder{color:rgba(10,10,10,0.35);}
+.form-field input:focus,
+.form-field textarea:focus{border-color:var(--dark);}
+.form-field textarea{min-height:96px;line-height:1.6;}
+/* Nav buttons */
+.form-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+.form-nav-back{
+  font-size:14px;font-weight:600;color:rgba(10,10,10,0.6);
+  background:none;border:none;cursor:pointer;
+  transition:color .2s;padding:0;
+}
+.form-nav-back:hover{color:#000;}
+.form-nav-next{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 28px;
+  background:var(--violet);color:#fff;
+  border:none;border-radius:8px;
+  font-family:'Manrope',sans-serif;font-size:14px;font-weight:700;
+  cursor:pointer;transition:background .2s,transform .15s;
+}
+.form-nav-next:hover{background:var(--violet-lit);transform:translateY(-1px);}
+.form-nav-next:disabled{opacity:.35;cursor:not-allowed;transform:none;}
+/* Success */
+.form-success{display:none;text-align:center;padding:32px 0;}
+.form-success.visible{display:block;}
+.form-success__icon{width:48px;height:48px;border-radius:50%;background:rgba(109,40,217,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.form-success__title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.02em;color:var(--dark);margin-bottom:8px;}
+.form-success__sub{font-size:14px;color:rgba(10,10,10,0.5);line-height:1.65;}
+@media(max-width:860px){
+  .contact__grid{grid-template-columns:1fr;}
+  .contact__left{position:static;}
+  .opt-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .opt-grid{grid-template-columns:1fr;}
+}
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer{background:var(--dark);border-top:1px solid var(--border-dark);}
+.foot-marq{padding:20px 0;border-bottom:1px solid var(--border-dark);}
+.foot-marq .marq__inner span{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(24px,4vw,48px);color:rgba(255,255,255,0.06);letter-spacing:-0.02em;text-transform:uppercase;padding:0 clamp(24px,4vw,56px);}
+.foot-marq .marq__inner span.sep{color:rgba(123,75,199,0.25);font-size:clamp(20px,3vw,36px);}
+.foot-main{padding:clamp(40px,6vw,72px) 0;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;}
+.foot-brand{}
+.foot-brand__logo{display:flex;align-items:center;margin-bottom:16px;}
+.foot-brand__logo img{height:60px;width:auto;display:block;}
+.foot-brand__wordmark{display:none;}
+.foot-brand__desc{font-size:13.5px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:280px;}
+.foot-col h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px;}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.foot-col ul li a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .2s;}
+.foot-col ul li a:hover{color:#fff;}
+.foot-bottom{padding:24px 0;border-top:1px solid var(--border-dark);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.foot-copy{font-size:12px;color:rgba(255,255,255,0.25);}
+.foot-credit{font-size:12px;color:rgba(255,255,255,0.2);}
+.foot-credit a{color:var(--violet-hi);transition:opacity .2s;}
+.foot-credit a:hover{opacity:.7;}
+@media(max-width:768px){
+  .foot-main{grid-template-columns:1fr 1fr;}
+  .foot-brand{grid-column:1/-1;}
+}
+@media(max-width:480px){
+  .foot-main{grid-template-columns:1fr;}
+  .foot-brand{grid-column:1;}
+}
+
+/* ─── LGPD BANNER ───────────────────────────────────── */
+#lgpd-banner{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);
+  z-index:200;
+  width:calc(100% - 48px);max-width:680px;
+  background:#fff;
+  border:1px solid rgba(10,10,10,0.10);
+  border-radius:16px;
+  box-shadow:0 8px 48px rgba(0,0,0,0.14);
+  padding:20px 24px;
+  display:flex;align-items:center;gap:20px;
+  opacity:0;
+  transition:transform .5s cubic-bezier(.16,1,.3,1), opacity .5s ease;
+}
+#lgpd-banner.show{transform:translateX(-50%) translateY(0);opacity:1;}
+.lgpd-icon{
+  flex-shrink:0;width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(120deg,#C084FC,#6D28D9);
+  display:flex;align-items:center;justify-content:center;
+}
+.lgpd-text{flex:1;min-width:0;}
+.lgpd-text p{
+  font-size:13px;line-height:1.6;color:rgba(10,10,10,0.65);margin:0;
+}
+.lgpd-text a{color:#6D28D9;text-decoration:underline;}
+.lgpd-actions{display:flex;gap:10px;flex-shrink:0;}
+.lgpd-btn{
+  height:38px;padding:0 18px;border-radius:8px;
+  font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;
+  cursor:pointer;border:none;white-space:nowrap;transition:opacity .2s;
+}
+.lgpd-btn:hover{opacity:.85;}
+.lgpd-btn--accept{background:#6D28D9;color:#fff;}
+.lgpd-btn--reject{background:transparent;color:rgba(10,10,10,0.5);border:1px solid rgba(10,10,10,0.15);}
+@media(max-width:600px){
+  #lgpd-banner{flex-wrap:wrap;gap:14px;padding:18px 18px;}
+  .lgpd-actions{width:100%;justify-content:flex-end;}
+}
+/* ─── FLOATING WHATSAPP ──────────────────────────────── */
+.wa-wrap{
+  position:fixed;bottom:28px;right:28px;z-index:88;
+  display:flex;align-items:center;gap:12px;
+}
+.wa-avatar{
+  position:relative;flex-shrink:0;
+  width:56px;height:56px;
+}
+.wa-float{
+  display:block;
+  width:56px;height:56px;border-radius:50%;
+  overflow:hidden;
+  box-shadow:0 2px 16px rgba(0,0,0,.35),0 0 0 3px #07050C,0 0 0 5px rgba(255,255,255,0.28);
+  transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.06);}
+.wa-float__photo{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  pointer-events:none;
+}
+.wa-float__dot{
+  position:absolute;bottom:1px;right:1px;
+  width:14px;height:14px;border-radius:50%;
+  background:#25D366;
+  border:2.5px solid #07050C;
+  animation:wa-pulse 2.8s ease-in-out infinite;
+}
+@keyframes wa-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.5);}
+  50%{box-shadow:0 0 0 6px rgba(37,211,102,0);}
+}
+.wa-bubble{
+  background:#fff;
+  border-radius:12px 12px 4px 12px;
+  padding:10px 14px;
+  font-family:'Manrope',sans-serif;
+  font-size:13px;font-weight:500;
+  color:#0A0A0A;
+  box-shadow:0 4px 20px rgba(0,0,0,.12);
+  white-space:nowrap;
+  opacity:0;transform:translateX(8px);
+  transition:opacity .4s ease,transform .4s ease;
+  pointer-events:none;
+  position:relative;
+}
+.wa-bubble::after{
+  content:'';position:absolute;right:-7px;bottom:10px;
+  border:7px solid transparent;
+  border-right:none;
+  border-left-color:#fff;
+}
+.wa-bubble.show{opacity:1;transform:translateX(0);pointer-events:auto;}
+.wa-bubble__close{
+  margin-left:10px;
+  font-size:11px;color:rgba(0,0,0,.35);
+  cursor:pointer;vertical-align:middle;
+}
+.wa-bubble__close:hover{color:rgba(0,0,0,.6);}
+@media(max-width:480px){
+  .wa-wrap{bottom:20px;right:20px;}
+  .wa-bubble{display:none;}
+}
+/* ─── PRELOADER ──────────────────────────────────────── */
+#preloader{
+  position:fixed;inset:0;z-index:9999;
+  background:#1e0a3c;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .9s cubic-bezier(.76,0,.24,1);
+}
+#preloader img{
+  width:160px;height:auto;
+  animation:preloader-slide .8s cubic-bezier(.16,1,.3,1) forwards;
+  transition:opacity .3s ease;
+}
+@keyframes preloader-slide{
+  from{opacity:0;transform:translateX(40px);}
+  to{opacity:1;transform:translateX(0);}
+}
+#preloader__line{
+  width:160px;height:1.5px;
+  background:#fff;
+  transform:scaleX(0);
+  transform-origin:center;
+  margin-top:16px;
+  animation:preloader-line .6s cubic-bezier(.16,1,.3,1) .7s forwards;
+}
+@keyframes preloader-line{
+  from{transform:scaleX(0);opacity:0;}
+  to{transform:scaleX(1);opacity:.6;}
+}
+#preloader.hide{transform:translateY(-100%);}
+#preloader.hide img{opacity:0;}
+</style>
+</head>
+<body>
+
+<!-- ─── PRELOADER ─────────────────────────────────────── -->
+<div id="preloader">
+  <div style="display:flex;flex-direction:column;align-items:center;">
+    <img src="logoellus_branco.webp" alt="Ellus Agency">
+    <div id="preloader__line"></div>
+  </div>
+</div>
+
+<!-- ─── NAVBAR ─────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__logo">
+      <img src="logoellus_branco.webp" alt="Ellus Agency" class="logo--white">
+      <img src="ellus_logo_8k.webp"    alt="Ellus Agency" class="logo--color">
+    </a>
+
+    <div class="nav__links">
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <a href="https://wa.me/5513996188170?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento!" class="nav__cta" target="_blank" rel="noopener">
+      Falar no WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- ─── HERO ───────────────────────────────────────────── -->
+<section class="hero" id="hero-vanta">
+  <div class="hero__noise"></div>
+
+  <!-- Marquee de clientes no final da hero -->
+  <div class="marq dark" style="position:absolute;bottom:0;left:0;right:0;border-top:1px solid rgba(255,255,255,0.07);">
+    <div class="marq__inner" aria-hidden="true">
+      <span>Associação Instinto</span><span class="dot">·</span>
+      <span>Igue Bananas</span><span class="dot">·</span>
+      <span>Advocacia Thays Monique</span><span class="dot">·</span>
+      <span>Vale Fit Academia</span><span class="dot">·</span>
+      <span>W.O.G. Negócios Imobiliários</span><span class="dot">·</span>
+      <span>Vivitati Bananas Climatizadas</span><span class="dot">·</span>
+      <span>Associação Instinto</span><span class="dot">·</span>
+      <span>Igue Bananas</span><span class="dot">·</span>
+      <span>Advocacia Thays Monique</span><span class="dot">·</span>
+      <span>Presença Digital</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <div class="shell hero__inner">
+    <p class="label hero__label rv">Agência Digital</p>
+    <h1 class="disp rv rv-d1">
+      Criamos sites que fazem<br>
+      a sua empresa ser<br>
+      <em>a escolha certa.</em>
+    </h1>
+    <div class="hero__layout">
+      <div class="hero__bottom-left">
+        <p class="hero__sub rv rv-d2">
+          Credibilidade e autoridade são a base para conquistar a confiança do seu cliente. Se você quer vender, seu site precisa comunicar isso de forma estratégica — e é isso que a Ellus faz.
+        </p>
+        <div class="hero__actions rv rv-d3">
+          <a href="https://wa.me/5513996188170?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento!" class="btn-primary" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.12 1.524 5.855L.057 23.27a.75.75 0 00.914.913l5.355-1.469A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.694-.497-5.25-1.367l-.375-.217-3.898 1.069 1.076-3.978-.231-.384A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Pedir orçamento
+          </a>
+          <a href="#servicos" class="btn-ghost">
+            Ver serviços →
+          </a>
+        </div>
+      </div>
+
+      <nav class="hero__services-menu rv rv-d2" aria-label="Serviços">
+        <a class="hero__svc-item" href="#servicos">Landing Pages</a>
+        <a class="hero__svc-item" href="#servicos">Sites Institucionais</a>
+        <a class="hero__svc-item" href="#servicos">E-commerces</a>
+        <a class="hero__svc-item" href="#servicos">Soluções Personalizadas</a>
+      </nav>
+    </div>
+    <p class="hero__avail rv rv-d3">
+      <span class="hero__avail-dot" aria-hidden="true"></span>
+      Agenda aberta para novos projetos
+    </p>
+  </div>
+
+</section>
+
+<!-- ─── INTRO ──────────────────────────────────────────── -->
+<section class="intro">
+    <div class="intro__layout">
+      <div class="intro__left-wrap">
+        <div class="intro__left">
+          <p class="intro__big rv">A primeira impressão acontece <em>antes</em> do primeiro contato.</p>
+          <p class="intro__tagline rv rv-d1">Uma presença digital estratégica transmite confiança e transforma <em>credibilidade em vantagem competitiva.</em></p>
+          <p class="intro__body rv rv-d2">Quando alguém pesquisa sua empresa, o site, a apresentação e a forma como sua marca se posiciona podem ser decisivos para conquistar o próximo contato.</p>
+          <p class="intro__body rv rv-d2">A Ellus atende negócios e profissionais que querem comunicar com clareza, fortalecer sua autoridade e transformar sua presença digital em oportunidades — com sites pensados para representar a marca e ganhar visibilidade no Google.</p>
+        </div>
+        <div class="intro__stats rv rv-d3">
+          <div>
+            <div class="stat__num"><span>4+</span> anos</div>
+            <div class="stat__label">experiência em design digital</div>
+          </div>
+          <div>
+            <div class="stat__num">SEO</div>
+            <div class="stat__label">estratégia desde a estrutura</div>
+          </div>
+          <div>
+            <div class="stat__num"><span>100%</span></div>
+            <div class="stat__label">projetos sob medida</div>
+          </div>
+          <div>
+            <div class="stat__num">IA</div>
+            <div class="stat__label">tecnologia aplicada ao desenvolvimento</div>
+          </div>
+        </div>
+      </div>
+      <div class="intro__right rv rv-d2">
+        <img class="intro__img" src="marina-trabalho.webp" alt="Marina Almeida — Ellus Agency">
+      </div>
+    </div>
+</section>
+
+<!-- Marquee entre intro e impact -->
+<div class="marq light" style="background:var(--white);padding:20px 0;border-top:1px solid var(--border-light);">
+  <div class="marq__inner" aria-hidden="true">
+    <span>Site Institucional</span><span class="dot">·</span>
+    <span>Landing Page</span><span class="dot">·</span>
+    <span>E-commerce</span><span class="dot">·</span>
+    <span>Soluções Personalizadas</span><span class="dot">·</span>
+    <span>Presença Digital</span><span class="dot">·</span>
+    <span>SEO Estratégico</span><span class="dot">·</span>
+    <span>Site Institucional</span><span class="dot">·</span>
+    <span>Landing Page</span><span class="dot">·</span>
+    <span>E-commerce</span><span class="dot">·</span>
+    <span>Soluções Personalizadas</span><span class="dot">·</span>
+    <span>Presença Digital</span><span class="dot">·</span>
+    <span>Vivitati Bananas Climatizadas</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ─── IMPACT ────────────────────────────────────────── -->
+<section class="impact">
+  <div class="impact__header">
+    <p class="impact__label label rv">Resultado visual</p>
+    <div class="impact__title-wrap">
+      <h2 class="impact__title">
+        <span class="tl rv">Design pensado</span>
+        <span class="tl rv rv-d2">em cada <em>detalhe.</em></span>
+      </h2>
+    </div>
+  </div>
+
+  <div id="impact-driver" class="impact__scroll-driver">
+    <div class="impact__asset impact__asset--sticky">
+      <div id="lottie-impact" class="impact__lottie"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PORTFOLIO ─────────────────────────────────────── -->
+<section class="portfolio" id="portfolio">
+  <div class="shell">
+    <div class="sec-hd rv">
+      <div>
+        <p class="sec-hd__num label" style="margin-bottom:12px;">Portfólio</p>
+        <h2 class="disp">Projetos entregues</h2>
+      </div>
+      <p style="font-size:14px;color:var(--muted-light);max-width:260px;text-align:right;line-height:1.6;">Cada site construído com briefing, estratégia e preview antes da entrega final.</p>
+    </div>
+
+    <!-- Grupo 1: Prontos -->
+    <!-- Grupo 1: Prontos -->
+    <div class="porto-group">
+      <p class="porto-group__label rv">Sites entregues</p>
+      <div class="porto-grid">
+        <div class="porto-item rv">
+          <a class="porto-card" href="https://iguebananas.com.br/" target="_blank" rel="noopener">
+            <img class="porto-card__img" src="igue.webp" alt="Igue Bananas">
+            <div class="porto-card__hover"><div class="porto-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div><span class="porto-card__hover-label">Acessar</span></div>
+          </a>
+          <div class="porto-card__info">
+            <div class="porto-card__name">Igue Bananas</div>
+            <div class="porto-card__tags"><span class="porto-card__tag">Landing Page</span></div>
+          </div>
+        </div>
+        <div class="porto-item rv rv-d1">
+          <a class="porto-card" href="https://associacaoinstinto.org.br/" target="_blank" rel="noopener">
+            <img class="porto-card__img" src="associacao.webp" alt="Associação Instinto">
+            <div class="porto-card__hover"><div class="porto-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div><span class="porto-card__hover-label">Acessar</span></div>
+          </a>
+          <div class="porto-card__info">
+            <div class="porto-card__name">Associação Instinto</div>
+            <div class="porto-card__tags"><span class="porto-card__tag">Site Institucional</span></div>
+          </div>
+        </div>
+        <div class="porto-item rv rv-d2">
+          <a class="porto-card" href="https://advthaysmonique.com.br/" target="_blank" rel="noopener">
+            <img class="porto-card__img" src="thays.webp" alt="Advocacia Thays Monique">
+            <div class="porto-card__hover"><div class="porto-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div><span class="porto-card__hover-label">Acessar</span></div>
+          </a>
+          <div class="porto-card__info">
+            <div class="porto-card__name">Advocacia Thays Monique</div>
+            <div class="porto-card__tags"><span class="porto-card__tag">Site Institucional</span></div>
+          </div>
+        </div>
+        <div class="porto-item rv rv-d3">
+          <div class="porto-card wip">
+            <div class="porto-card__placeholder-inner">
+              <svg class="wip-spinner" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><g transform="translate(22,22)"><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.55" transform="rotate(0)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.06" transform="rotate(30)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.10" transform="rotate(60)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.16" transform="rotate(90)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.22" transform="rotate(120)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.28" transform="rotate(150)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.34" transform="rotate(180)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.40" transform="rotate(210)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.45" transform="rotate(240)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.49" transform="rotate(270)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.52" transform="rotate(300)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.54" transform="rotate(330)"/></g></svg>
+              <div class="porto-card__wip-badge">Em andamento</div>
+            </div>
+          </div>
+          <div class="porto-card__info">
+            <div class="porto-card__name">Vale Fit Academia</div>
+            <div class="porto-card__tags"><span class="porto-card__tag">Landing Page</span></div>
+          </div>
+        </div>
+        <div class="porto-item rv rv-d4">
+          <div class="porto-card wip">
+            <div class="porto-card__placeholder-inner">
+              <svg class="wip-spinner" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><g transform="translate(22,22)"><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.55" transform="rotate(0)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.06" transform="rotate(30)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.10" transform="rotate(60)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.16" transform="rotate(90)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.22" transform="rotate(120)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.28" transform="rotate(150)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.34" transform="rotate(180)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.40" transform="rotate(210)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.45" transform="rotate(240)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.49" transform="rotate(270)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.52" transform="rotate(300)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.54" transform="rotate(330)"/></g></svg>
+              <div class="porto-card__wip-badge">Em andamento</div>
+            </div>
+          </div>
+          <div class="porto-card__info">
+            <div class="porto-card__name">W.O.G. Negócios Imobiliários</div>
+            <div class="porto-card__tags"><span class="porto-card__tag">Site Institucional</span></div>
+          </div>
+        </div>
+        <div class="porto-item rv rv-d4">
+          <div class="porto-card wip">
+            <div class="porto-card__placeholder-inner">
+              <svg class="wip-spinner" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><g transform="translate(22,22)"><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.55" transform="rotate(0)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.06" transform="rotate(30)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.10" transform="rotate(60)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.16" transform="rotate(90)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.22" transform="rotate(120)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.28" transform="rotate(150)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.34" transform="rotate(180)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.40" transform="rotate(210)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.45" transform="rotate(240)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.49" transform="rotate(270)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.52" transform="rotate(300)"/><rect x="-1.2" y="-13" width="2.4" height="7" rx="1.2" fill="#ffffff" opacity="0.54" transform="rotate(330)"/></g></svg>
+              <div class="porto-card__wip-badge">Em andamento</div>
+            </div>
+          </div>
+          <div class="porto-card__info">
+            <div class="porto-card__name">Vivitati Bananas Climatizadas</div>
+            <div class="porto-card__tags"><span class="porto-card__tag">Landing Page</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="porto-bottom rv">
+      <p class="porto-note">Portfólio em crescimento — novos projetos em andamento.</p>
+      <a href="https://wa.me/5513996188170?text=Olá%2C%20gostaria%20de%20ser%20o%20próximo%20case%20da%20Ellus!" class="btn-porto-cta" target="_blank">
+        Fazer um orçamento →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ──────────────────────────────────────── -->
+<section class="services" id="servicos">
+  <div class="shell">
+    <div class="sec-hd rv">
+      <div>
+        <p class="sec-hd__num label" style="margin-bottom:12px;">Serviços</p>
+        <h2 class="disp">O que a Ellus faz</h2>
+      </div>
+      <p class="sec-hd__sub">Cada negócio tem um objetivo a comunicar. Aqui, a mensagem é construída com design limpo e estratégia precisa.</p>
+    </div>
+
+    <div class="svc-list">
+      <div class="svc-item rv">
+        <div class="svc-num">01.</div>
+        <div class="svc-body">
+          <div class="svc-for">Para empresas, profissionais liberais e negócios de todos os segmentos</div>
+          <a class="svc-name svc-name--link" href="https://wa.me/5513996188170?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20um%20Site%20Institucional!" target="_blank" rel="noopener">Site Institucional <span class="svc-arrow"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M2 6L6 2M6 2H3M6 2V5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <p class="svc-desc">Site completo com páginas individuais, focado em transmitir credibilidade, comunicar e converter. Antes de entrar em contato, o cliente pesquisa — sua página precisa transmitir confiança e transformar visita em contato.</p>
+        </div>
+      </div>
+
+      <div class="svc-item rv rv-d1">
+        <div class="svc-num">02.</div>
+        <div class="svc-body">
+          <div class="svc-for">Para lançamentos, campanhas, eventos e negócios</div>
+          <a class="svc-name svc-name--link" href="https://wa.me/5513996188170?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20Landing%20Page!" target="_blank" rel="noopener">Landing Page <span class="svc-arrow"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M2 6L6 2M6 2H3M6 2V5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <p class="svc-desc">Página única focada em uma oferta e uma ação. Estrutura, copy e design trabalhados juntos para levar o visitante exatamente onde você quer.</p>
+        </div>
+      </div>
+
+      <div class="svc-item rv rv-d2">
+        <div class="svc-num">03.</div>
+        <div class="svc-body">
+          <div class="svc-for">Para lojas, produtos físicos e digitais</div>
+          <a class="svc-name svc-name--link" href="https://wa.me/5513996188170?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20um%20E-commerce!" target="_blank" rel="noopener">E-commerce <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);opacity:.7;vertical-align:middle;">em breve</span> <span class="svc-arrow"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M2 6L6 2M6 2H3M6 2V5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <p class="svc-desc">Loja online estruturada para vender. Do catálogo ao checkout — design, UX e integração de pagamento pensados para converter visita em venda.</p>
+        </div>
+      </div>
+
+      <div class="svc-item rv rv-d3">
+        <div class="svc-num">04.</div>
+        <div class="svc-body">
+          <div class="svc-for">Para projetos sob medida</div>
+          <a class="svc-name svc-name--link" href="https://wa.me/5513996188170?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20uma%20Solu%C3%A7%C3%A3o%20Personalizada!" target="_blank" rel="noopener">Soluções Personalizadas <span class="svc-arrow"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M2 6L6 2M6 2H3M6 2V5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <p class="svc-desc">Cada negócio tem necessidades únicas. Se você precisa de um projeto personalizado como aplicativos e/ou plataformas, em uma conversa entendemos e alinhamos o melhor caminho de desenvolvimento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROCESS ───────────────────────────────────────── -->
+<section class="process" id="processo">
+  <div class="shell">
+    <div class="sec-hd rv">
+      <div>
+        <p class="sec-hd__num label" style="margin-bottom:12px;">Como funciona</p>
+        <h2 class="disp">Do primeiro contato<br>à entrega</h2>
+      </div>
+    </div>
+
+    <div class="proc-grid">
+      <div class="proc-step rv">
+        <div class="proc-step__num">01</div>
+        <div class="proc-step__title">Reunião e diagnóstico</div>
+        <p class="proc-step__desc">Conversa para entender o negócio, o público e o que o site precisa resolver. Se tiver site antigo, analiso antes de qualquer avanço.</p>
+      </div>
+      <div class="proc-step rv rv-d1">
+        <div class="proc-step__num">02</div>
+        <div class="proc-step__title">Briefing e estratégia</div>
+        <p class="proc-step__desc">Link de briefing personalizado para você preencher no seu tempo. Com essas informações, monto a estratégia e o DNA de marca antes de começar.</p>
+      </div>
+      <div class="proc-step rv rv-d2">
+        <div class="proc-step__num">03</div>
+        <div class="proc-step__title">Construção e preview</div>
+        <p class="proc-step__desc">O site é construído e você recebe um preview antes da entrega final. Nada é publicado sem a sua aprovação.</p>
+      </div>
+      <div class="proc-step rv rv-d3">
+        <div class="proc-step__num">04</div>
+        <div class="proc-step__title">Aprovação e publicação</div>
+        <p class="proc-step__desc">Após aprovação, o site vai ao ar no domínio escolhido. Entrega com DNA de marca de cortesia e opção de plano de manutenção mensal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DIFFERENTIALS ─────────────────────────────────── -->
+<section class="diffs">
+  <div class="shell">
+    <div class="sec-hd rv">
+      <div>
+        <p class="sec-hd__num label" style="margin-bottom:12px;color:rgba(255,255,255,0.7);">Por que a Ellus</p>
+        <h2 class="disp" style="color:#fff;">Mais do que design.<br>Processo, cuidado<br>e entrega.</h2>
+      </div>
+    </div>
+
+    <div class="diffs-grid">
+      <div class="diff-card rv">
+        <div class="diff-title">Preview antes da entrega</div>
+        <p class="diff-desc">Você acompanha o site evoluindo em cada etapa — nada é publicado sem a sua aprovação.</p>
+      </div>
+      <div class="diff-card rv rv-d1">
+        <div class="diff-title">Briefing por link personalizado</div>
+        <p class="diff-desc">Formulário criado e adaptado especificamente para o seu negócio com base nos seus objetivos.</p>
+      </div>
+      <div class="diff-card rv rv-d2">
+        <div class="diff-title">DNA de Marca</div>
+        <p class="diff-desc">Desenvolvemos um documento com os principais elementos e direcionamentos da marca, entregue ao final do projeto.</p>
+      </div>
+      <div class="diff-card rv rv-d3">
+        <div class="diff-title">Diagnóstico antes de iniciar</div>
+        <p class="diff-desc">Analisamos cada projeto individualmente, com comunicação clara e alinhamento de expectativas.</p>
+      </div>
+      <div class="diff-card rv">
+        <div class="diff-title">UX adaptada ao público-alvo</div>
+        <p class="diff-desc">Tipografia, contraste, navegação e elementos pensados para tornar a experiência mais intuitiva e adequada ao seu público.</p>
+      </div>
+      <div class="diff-card rv rv-d1">
+        <div class="diff-title">Domínio e autonomia</div>
+        <p class="diff-desc">Mantemos domínio e hospedagem vinculados ao cliente, garantindo propriedade, acesso e independência na gestão dos ativos digitais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STRIPE ────────────────────────────────────────── -->
+<div class="stripe" id="stripe-anim" style="position:relative;">
+  <canvas id="stripe-canvas"></canvas>
+  <p class="stripe__text" id="stripe-text">Cada detalhe do seu projeto importa.<br>Da estratégia ao design.</p>
+</div>
+
+<!-- ─── ABOUT ─────────────────────────────────────────── -->
+<section class="about" id="sobre">
+  <div class="shell">
+    <div class="about__grid">
+
+      <div class="about__text">
+        <p class="about__label rv">Sobre</p>
+        <h2 class="about__title rv rv-d1">
+          Método claro.<br>
+          Estratégia e <em>intenção.</em>
+        </h2>
+        <p class="about__body rv rv-d2">
+          A Ellus é uma agência especializada em sites e landing pages para empresas e profissionais em todo o Brasil.
+        </p>
+        <p class="about__body rv rv-d2">
+          Antes de construir, entendemos. Antes de entregar, apresentamos. Cada projeto é pensado estrategicamente, desenvolvido de forma personalizada e com acompanhamento em todas as etapas.
+        </p>
+        <p class="about__body rv rv-d2">
+          Nosso processo envolve diagnóstico, estratégia, construção e apresentação para aprovação, sempre considerando a identidade, os objetivos e as necessidades de cada negócio.
+        </p>
+        <p class="about__body rv rv-d2">
+          O resultado é uma presença digital construída para representar sua marca, fortalecer sua credibilidade e contribuir para seus objetivos.
+        </p>
+        <div class="about__sig rv rv-d3">
+          <div class="about__sig-line"></div>
+          <div>
+            <div class="about__sig-text">Marina Almeida</div>
+            <div class="about__sig-sub">Ellus Agency</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__photo rv rv-d2">
+        <img src="marina-ellus.webp" alt="Marina Almeida — Ellus Agency">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ────────────────────────────────────────── -->
+<section class="contact" id="contato">
+  <div class="shell">
+    <div class="contact__grid">
+
+      <!-- Esquerda -->
+      <div class="contact__left rv">
+        <p class="contact__label">Contato</p>
+        <h2 class="contact__title">Vamos<br>conversar.</h2>
+        <p class="contact__sub">Preencha o formulário e eu entro em contato para entender melhor o que faz sentido para o seu momento.</p>
+        <div class="contact__divider"></div>
+        <p class="contact__direct-label">Prefere ir direto ao ponto?</p>
+        <a href="https://wa.me/5513996188170?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento!" class="contact__wa" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+
+      <!-- Direita — formulário -->
+      <div class="contact__form-wrap rv rv-d1">
+        <!-- Progress -->
+        <div class="form-progress">
+          <div class="form-dot active" id="dot-0"></div>
+          <div class="form-dot" id="dot-1"></div>
+          <div class="form-dot" id="dot-2"></div>
+        </div>
+
+        <!-- Step 0 — serviço -->
+        <div class="form-step visible" id="step-0">
+          <p class="form-step__q">O que você precisa?</p>
+          <div class="opt-grid" id="service-opts">
+            <button class="opt-btn" data-val="Site Institucional">Site Institucional</button>
+            <button class="opt-btn" data-val="Landing Page">Landing Page</button>
+            <button class="opt-btn" data-val="E-commerce">E-commerce</button>
+            <button class="opt-btn" data-val="Solução Personalizada">Solução Personalizada</button>
+            <button class="opt-btn" data-val="Manutenção mensal">Manutenção mensal</button>
+            <button class="opt-btn" data-val="Ainda não sei">Ainda não sei</button>
+          </div>
+          <div class="form-nav">
+            <span></span>
+            <button class="form-nav-next" id="next-0" disabled>Próximo →</button>
+          </div>
+        </div>
+
+        <!-- Step 1 — negócio -->
+        <div class="form-step" id="step-1">
+          <p class="form-step__q">Me conta sobre o seu negócio.</p>
+          <div class="form-field">
+            <label>Seu nome</label>
+            <input type="text" id="f-name" placeholder="Como você se chama?">
+          </div>
+          <div class="form-field">
+            <label>Segmento / tipo de negócio</label>
+            <input type="text" id="f-biz" placeholder="Ex: clínica, restaurante, loja...">
+          </div>
+          <div class="form-field">
+            <label>Cidade</label>
+            <input type="text" id="f-city" placeholder="Onde você está?">
+          </div>
+          <div class="form-nav">
+            <button class="form-nav-back" id="back-1">← Voltar</button>
+            <button class="form-nav-next" id="next-1">Próximo →</button>
+          </div>
+        </div>
+
+        <!-- Step 2 — contato -->
+        <div class="form-step" id="step-2">
+          <p class="form-step__q">Como te encontro?</p>
+          <div class="form-field">
+            <label>WhatsApp</label>
+            <input type="tel" id="f-phone" placeholder="(13) 9 0000-0000">
+          </div>
+          <div class="form-field">
+            <label>Algo mais que queira compartilhar? <span style="font-weight:400;opacity:.6">(opcional)</span></label>
+            <textarea id="f-msg" placeholder="Prazo, referências, dúvidas..."></textarea>
+          </div>
+          <div class="form-nav">
+            <button class="form-nav-back" id="back-2">← Voltar</button>
+            <button class="form-nav-next" id="submit-form">Enviar →</button>
+          </div>
+        </div>
+
+        <!-- Sucesso -->
+        <div class="form-success" id="form-success">
+          <div class="form-success__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="form-success__title">Mensagem enviada!</div>
+          <p class="form-success__sub">Obrigada pelo contato. Vou retornar pelo WhatsApp em breve.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div class="foot-marq">
+    <div class="marq">
+      <div class="marq__inner" aria-hidden="true">
+        <span>Ellus</span><span class="sep">·</span>
+        <span>Ellus</span><span class="sep">·</span>
+        <span>Ellus</span><span class="sep">·</span>
+        <span>Ellus</span><span class="sep">·</span>
+        <span>Ellus</span><span class="sep">·</span>
+        <span>Ellus</span><span class="sep">·</span>
+        <span>Ellus</span><span class="sep">·</span>
+        <span>Ellus</span><span class="sep">·</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell">
+    <div class="foot-main">
+      <div class="foot-brand">
+        <div class="foot-brand__logo">
+          <img src="logoellus_branco.webp" alt="Ellus Agency">
+        </div>
+        <p class="foot-brand__desc">Sites e landing pages estratégicos para negócios e profissionais em todo o Brasil.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Site Institucional</a></li>
+          <li><a href="#servicos">Landing Page</a></li>
+          <li><a href="#servicos">E-commerce</a></li>
+          <li><a href="#servicos">Soluções Personalizadas</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5513996188170" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:ellus.agency.adm@gmail.com">E-mail</a></li>
+          <li><a href="https://instagram.com/ellusagency" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p class="foot-copy">© 2026 Ellus Agency. Todos os direitos reservados. · <a href="privacidade.html" style="opacity:.5;color:inherit;">Política de Privacidade</a></p>
+      <p class="foot-credit">Atendimento remoto · Brasil</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── LGPD BANNER ───────────────────────────────────── -->
+<div id="lgpd-banner" role="dialog" aria-label="Aviso de privacidade">
+  <div class="lgpd-icon">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  </div>
+  <div class="lgpd-text">
+    <p>Usamos seus dados apenas para responder ao seu contato. Ao continuar, você concorda com nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+  </div>
+  <div class="lgpd-actions">
+    <button class="lgpd-btn lgpd-btn--reject" id="lgpd-reject">Recusar</button>
+    <button class="lgpd-btn lgpd-btn--accept" id="lgpd-accept">Aceitar</button>
+  </div>
+</div>
+
+<!-- ─── FLOATING WHATSAPP ─────────────────────────────── -->
+<div class="wa-wrap">
+  <div class="wa-avatar">
+    <a class="wa-float" href="https://wa.me/5513996188170?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <img class="wa-float__photo" src="marina-ellus.webp" alt="Marina — Ellus Agency">
+    </a>
+    <span class="wa-float__dot"></span>
+  </div>
+</div>
+
+<!-- ─── JAVASCRIPT ─────────────────────────────────────── -->
+<script src="https://cdn.jsdelivr.net/npm/lottie-web/build/player/lottie.min.js"></script>
+<script>
+// Navbar scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+// Preloader
+const preloader = document.getElementById('preloader');
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    preloader.classList.add('hide');
+    setTimeout(() => preloader.remove(), 950);
+  }, 600);
+});
+
+// Reveal on scroll
+const rvEls = document.querySelectorAll('.rv');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }});
+}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+rvEls.forEach(el => obs.observe(el));
+
+// Impact Lottie — desktop only (mobile skip para não travar CPU)
+(()=>{
+  const container = document.getElementById('lottie-impact');
+  const driver    = document.getElementById('impact-driver');
+  if(!container || !driver) return;
+
+  // Mobile: não carrega o Lottie, mostra gradiente animado no lugar
+  if(window.innerWidth <= 900){
+    container.style.cssText = 'background:linear-gradient(135deg,#1C1830 0%,#2D1B69 50%,#07050C 100%);width:100%;height:100%;';
+    return;
+  }
+
+  let loaded = false;
+  let anim   = null;
+
+  const initLottie = () => {
+    if(loaded) return;
+    loaded = true;
+    const s1 = document.createElement('script');
+    s1.src = 'https://cdn.jsdelivr.net/npm/lottie-web/build/player/lottie.min.js';
+    s1.onload = () => {
+      const s2 = document.createElement('script');
+      s2.src = 'scene-data.js';
+      s2.onload = () => {
+        anim = lottie.loadAnimation({
+          container,
+          renderer: 'svg',
+          loop: false,
+          autoplay: false,
+          animationData: window.sceneData
+        });
+        anim.addEventListener('DOMLoaded', () => {
+          const svg = container.querySelector('svg');
+          if(svg) svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+          update();
+        });
+        window.addEventListener('scroll', update, {passive:true});
+      };
+      document.head.appendChild(s2);
+    };
+    document.head.appendChild(s1);
+  };
+
+  const update = () => {
+    if(!anim || !anim.totalFrames) return;
+    const rect     = driver.getBoundingClientRect();
+    const scrolled = -rect.top;
+    const total    = rect.height - window.innerHeight;
+    const progress = Math.max(0, Math.min(1, scrolled / total));
+    anim.goToAndStop(progress * anim.totalFrames, true);
+  };
+
+  // Dispara quando a seção impact estiver a 500px de distância
+  const lazyObs = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting){ initLottie(); lazyObs.disconnect(); }
+  }, {rootMargin:'500px'});
+  lazyObs.observe(driver);
+})();
+
+
+// Stripe letter animation
+const stripeEl = document.getElementById('stripe-anim');
+if(stripeEl){
+  // Split text into letter spans
+  const p = document.getElementById('stripe-text');
+  if(p){
+    const nodes = Array.from(p.childNodes);
+    p.innerHTML = '';
+    let idx = 0;
+    nodes.forEach(node => {
+      if(node.nodeType === Node.TEXT_NODE){
+        // Split by spaces to keep words together (no mid-word line breaks)
+        const words = node.textContent.split(' ');
+        words.forEach((word, wi) => {
+          const wordWrap = document.createElement('span');
+          wordWrap.style.cssText = 'display:inline-block;white-space:nowrap;';
+          word.split('').forEach(ch => {
+            const s = document.createElement('span');
+            s.className = 'stripe__letter';
+            s.textContent = ch;
+            s.setAttribute('data-char', ch);
+            s.style.setProperty('--d', (idx * 0.032) + 's');
+            idx++;
+            wordWrap.appendChild(s);
+          });
+          p.appendChild(wordWrap);
+          // Add space between words (except after last word)
+          if(wi < words.length - 1){
+            const sp = document.createElement('span');
+            sp.className = 'stripe__letter space';
+            sp.innerHTML = '&nbsp;';
+            p.appendChild(sp);
+          }
+        });
+      } else if(node.nodeName === 'BR'){
+        p.appendChild(document.createElement('br'));
+      }
+    });
+  }
+  const stripeObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('in'); stripeObs.unobserve(e.target); }
+    });
+  }, {threshold:.3});
+  stripeObs.observe(stripeEl);
+}
+
+// WhatsApp bubble
+(()=>{
+  const bubble = document.getElementById('wa-bubble');
+  const closeBtn = document.getElementById('wa-bubble-close');
+  if(!bubble) return;
+  setTimeout(() => bubble.classList.add('show'), 3000);
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    bubble.classList.remove('show');
+  });
+})();
+
+// Duplicate marquees for seamless loop
+document.querySelectorAll('.marq__inner').forEach(inner => {
+  const clone = inner.innerHTML;
+  inner.innerHTML = clone + clone;
+});
+
+
+// ── Multi-step contact form ──────────────────────────
+(function(){
+  const dots   = [0,1,2].map(i => document.getElementById('dot-'+i));
+  const steps  = [0,1,2].map(i => document.getElementById('step-'+i));
+  const successEl = document.getElementById('form-success');
+  let current = 0;
+  let selectedService = '';
+
+  function goTo(n){
+    steps[current].classList.remove('visible');
+    current = n;
+    steps[current].classList.add('visible');
+    dots.forEach((d,i)=>{
+      d.classList.remove('active','done');
+      if(i < current) d.classList.add('done');
+      if(i === current) d.classList.add('active');
+    });
+  }
+
+  // Option buttons — step 0
+  document.querySelectorAll('#service-opts .opt-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('#service-opts .opt-btn').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedService = btn.dataset.val;
+      document.getElementById('next-0').disabled = false;
+    });
+  });
+
+  document.getElementById('next-0').addEventListener('click',()=>{ if(selectedService) goTo(1); });
+  document.getElementById('back-1').addEventListener('click',()=>goTo(0));
+  document.getElementById('next-1').addEventListener('click',()=>goTo(2));
+  document.getElementById('back-2').addEventListener('click',()=>goTo(1));
+
+  document.getElementById('submit-form').addEventListener('click',()=>{
+    const name  = document.getElementById('f-name').value.trim();
+    const biz   = document.getElementById('f-biz').value.trim();
+    const city  = document.getElementById('f-city').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    const msg   = document.getElementById('f-msg').value.trim();
+
+    const text = encodeURIComponent(
+      `Olá! Vim pelo site da Ellus.\n\n`+
+      `Serviço: ${selectedService}\n`+
+      (name  ? `Nome: ${name}\n` : '')+
+      (biz   ? `Negócio: ${biz}\n` : '')+
+      (city  ? `Cidade: ${city}\n` : '')+
+      (msg   ? `\nMensagem: ${msg}` : '')
+    );
+
+    steps[current].classList.remove('visible');
+    dots.forEach(d=>{ d.classList.remove('active'); d.classList.add('done'); });
+    successEl.classList.add('visible');
+
+    // Abre WhatsApp após 800ms
+    setTimeout(()=>{
+      window.open(`https://wa.me/5513996188170?text=${text}`,'_blank');
+    }, 800);
+  });
+})();
+
+// Smooth anchor scroll with offset
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){ e.preventDefault(); window.scrollTo({top: target.offsetTop - 80, behavior:'smooth'}); }
+  });
+});
+
+// ── Dot Grid — Faixa ─────────────────────────────────────
+(()=>{
+  const canvas = document.getElementById('stripe-canvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const section = document.getElementById('stripe-anim');
+  let mouse = { x: -9999, y: -9999 };
+  let W, H, dots = [];
+
+  const GAP    = 9;
+  const RADIUS = 140;
+  const BASE_R = 0.8;
+  const MAX_R  = 2.0;
+  const BASE_A = 0;
+  const MAX_A  = 0.70;
+
+  const buildGrid = () => {
+    dots = [];
+    for(let x = GAP/2; x < W; x += GAP)
+      for(let y = GAP/2; y < H; y += GAP)
+        dots.push({ x, y, r: BASE_R, a: BASE_A });
+  };
+
+  const resize = () => {
+    W = canvas.width  = section.offsetWidth;
+    H = canvas.height = section.offsetHeight;
+    buildGrid();
+  };
+  resize();
+  window.addEventListener('resize', resize);
+
+  section.addEventListener('mousemove', e => {
+    const rect = section.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+  section.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+  const draw = () => {
+    ctx.clearRect(0, 0, W, H);
+    dots.forEach(d => {
+      const dx   = d.x - mouse.x;
+      const dy   = d.y - mouse.y;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      const t    = Math.max(0, 1 - dist / RADIUS);
+      const ease = t * t * (3 - 2 * t);
+      d.r += (BASE_R + (MAX_R - BASE_R) * ease - d.r) * 0.1;
+      d.a += (BASE_A + (MAX_A - BASE_A) * ease - d.a) * 0.1;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(109,40,217,${d.a})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  };
+  draw();
+})();
+
+</script>
+
+<!-- ─── VANTA WAVES ─────────────────────────────────────── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+<script>
+  VANTA.WAVES({
+    el: '#hero-vanta',
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200,
+    minWidth: 200,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color: 0x080212,
+    shininess: 40,
+    waveHeight: 18,
+    waveSpeed: 0.5,
+    zoom: 0.85
+  });
+</script>
+
+<!-- ─── LGPD JS ─────────────────────────────────────── -->
+<script>
+(()=>{
+  const banner = document.getElementById('lgpd-banner');
+  if(!banner) return;
+  const KEY = 'ellus_privacy_consent';
+  if(localStorage.getItem(KEY)) return; // já decidiu antes
+  setTimeout(()=> banner.classList.add('show'), 1200);
+  document.getElementById('lgpd-accept').addEventListener('click', ()=>{
+    localStorage.setItem(KEY,'accepted');
+    dismiss();
+  });
+  document.getElementById('lgpd-reject').addEventListener('click', ()=>{
+    localStorage.setItem(KEY,'rejected');
+    dismiss();
+  });
+  function dismiss(){
+    banner.style.transition='transform .4s cubic-bezier(.76,0,.24,1),opacity .4s ease';
+    banner.style.transform='translateX(-50%) translateY(140px)';
+    banner.style.opacity='0';
+    setTimeout(()=> banner.remove(), 420);
+  }
+})();
+</script>
+</body>
+</html>

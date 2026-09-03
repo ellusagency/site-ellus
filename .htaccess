@@ -1,0 +1,24 @@
+# Compressão Gzip
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache de arquivos estáticos
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp          "access plus 1 year"
+  ExpiresByType image/png           "access plus 1 year"
+  ExpiresByType image/jpeg          "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css            "access plus 1 month"
+  ExpiresByType text/html           "access plus 1 hour"
+</IfModule>
+
+# Serve WebP quando suportado
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{REQUEST_FILENAME} \.(png|jpe?g)$
+  RewriteCond %{REQUEST_FILENAME}\.webp -f
+  RewriteRule ^(.+)\.(png|jpe?g)$ $1.webp [T=image/webp,L]
+</IfModule>
